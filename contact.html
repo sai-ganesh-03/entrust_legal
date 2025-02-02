@@ -13,6 +13,8 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
 
@@ -59,12 +61,12 @@
             <li class="nav-item">
               <a href="./index.html" class="nav-link">Home</a>
             </li>
-            <!-- <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
-            </li> -->
             <li class="nav-item">
-              <a href="./attorneys.html" class="nav-link">Attorneys</a>
+              <a href="about.html" class="nav-link">About</a>
             </li>
+            <!-- <li class="nav-item">
+              <a href="./attorneys.html" class="nav-link">Attorneys</a>
+            </li> -->
             <li class="nav-item">
               <a href="./practice-areas.html" class="nav-link"
                 >Practice Areas</a
@@ -146,7 +148,7 @@
         <div class="row block-9 no-gutters">
           <div class="col-lg-6 order-md-last d-flex">
             <form
-              action="https://mailthis.to/tocontactlawyer@gmail.com"
+              action="https://formsubmit.co/tocontactlawyer@gmail.com"
               method="POST"
               enctype="multipart/form-data"
               class="bg-light p-5 contact-form"
@@ -202,7 +204,7 @@
           </div>
 
           <div class="col-lg-6 d-flex">
-            <div id="map" class="bg-white"></div>
+          <div id="map"></div>
           </div>
         </div>
       </div>
@@ -212,7 +214,7 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
               <img
                 style="width: 150px; margin: 0 0.5em"
                 src="./images/entrust_legal_logo.jpg"
@@ -332,7 +334,7 @@
               <h2 class="ftco-heading-2">Business Hours</h2>
               <div class="opening-hours">
                 <h4>Opening Days:</h4>
-                <p class="pl-3">
+                <p >
                   <span>Monday – Sunday: 9am to 10 pm</span>
                   
                 </p>
@@ -395,8 +397,26 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      // Initialize the map
+      const map = L.map('map').setView([17.41774798449491, 78.45171556690707], 7);
+      
+      // Add OpenStreetMap tiles
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+      
+      // Add a marker
+      const marker = L.marker([17.41774798449491, 78.45171556690707])
+          .addTo(map)
+          .bindPopup('Your Location');
+      
+      // You can style the map using CSS filters to match your original gray theme
+      // document.querySelector('.leaflet-tile-pane').style.filter = 'grayscale(100%) brightness(103%)';
+      </script>
+      
   </body>
 </html>

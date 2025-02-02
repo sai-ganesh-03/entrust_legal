@@ -11168,7 +11168,6 @@ h5,
   opacity: 1;
   bottom: -25px;
 }
-
 .practice-area {
   display: block;
   margin-bottom: 40px;
@@ -11257,7 +11256,7 @@ h5,
   -moz-box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
   box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
 }
-.case:after {
+/* .case:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -11272,7 +11271,7 @@ h5,
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
+} */
 .case .text {
   z-index: 1;
   width: 100;
@@ -11317,7 +11316,7 @@ h5,
 }
 @media (min-width: 992px) {
   .ftco-consultation .overlay {
-    width: 50%;
+    width: 100%;
   }
 }
 .ftco-consultation .half {
@@ -12068,7 +12067,9 @@ textarea.form-control {
 .contact-section .contact-form {
   width: 100%;
 }
-
+#map{
+  z-index: 0;
+}
 .block-9 .form-control {
   outline: none !important;
   -webkit-box-shadow: none !important;
