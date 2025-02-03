@@ -10514,7 +10514,7 @@ h5,
 }
 @media (max-width: 991.98px) {
   .ftco-navbar-light {
-    background: #000000 !important;
+    background: #222831 !important;
     position: relative;
     top: 0;
   }
@@ -11460,7 +11460,56 @@ textarea.form-control {
 .ftco-no-pb {
   padding-bottom: 0 !important;
 }
+.whatsapp-icon {
+  position: fixed;
+  bottom: clamp(10px, 5vh, 30px);    /* Responsive bottom spacing */
+  right: clamp(10px, 5vw, 30px);     /* Responsive right spacing */
+  z-index: 1000;
+  list-style: none;
+}
 
+.whatsapp-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(40px, 15vw, 60px) !important;    /* Responsive width */
+  height: clamp(40px, 15vw, 60px) !important;   /* Responsive height */
+  background: rgba(37, 211, 102, 1) !important;
+  /* background-color: #25D366; */
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);  /* Added shadow for better visibility */
+}
+
+.whatsapp-icon a:hover {
+  transform: scale(1.1);
+  background-color: #128C7E;
+}
+
+.icon-whatsapp {
+  font-size: clamp(20px, 8vw, 30px) !important; /* Responsive icon size */
+}
+
+/* Media Query for very small screens */
+@media screen and (max-width: 320px) {
+  .whatsapp-icon a {
+      width: 35px;
+      height: 35px;
+  }
+  
+  .icon-whatsapp {
+      font-size: 18px;
+  }
+}
+
+/* Media Query for tablets and larger */
+@media screen and (min-width: 768px) {
+  .whatsapp-icon {
+      bottom: 30px;
+      right: 30px;
+  }
+}
 .ftco-footer {
   font-size: 16px;
   background: #222831;
