@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RSQRSE4QJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0RSQRSE4QJ');
+    </script>
     <title>Entrust Legal</title>
     <meta charset="utf-8" />
     <meta
@@ -418,7 +427,7 @@
               </div>
               <div class="form-group">
                 <input
-                  name="_replyto"
+                  name="email"
                   type="text"
                   class="form-control"
                   placeholder="Your Email"
@@ -426,7 +435,7 @@
               </div>
               <div class="form-group">
                 <input
-                  name="_subject"
+                  name="Subject"
                   type="text"
                   class="form-control"
                   placeholder="Subject"
@@ -449,12 +458,9 @@
                   class="btn btn-dark py-3 px-4 mx-auto d-block"
                 />
               </div>
-              <input
-                type="hidden"
-                name="_confirmation"
-                value="Appointment Booked"
-              />
-              <input type="hidden" name="Form Type" value="Free Consultation" />
+                <input type="hidden" name="_autoresponse" value="Your query submission has been received!! ">
+                <input type="hidden" name="_subject" value="New submission from Free Consultation Form">
+                <input type="hidden" name="_template" value="table">
             </form>
           </div>
         </div>
